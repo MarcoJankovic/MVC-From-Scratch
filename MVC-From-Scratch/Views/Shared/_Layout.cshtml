@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="/Style.css" rel="stylesheet" />
+</head>
+<body>
+
+    <header>
+        <h3 class="logo">MVC-From-Scratch</h3>
+        <nav class="navigation">
+            <ul>
+                <li>
+                    <a asp-action="Index" asp-controller="Home">Home</a>
+                </li>
+                <li>
+                    <a asp-action="Contact" asp-controller="Home">Contact Us</a>
+                </li>
+                <li>
+                    <a asp-action="About" asp-controller="Home">About Us</a>
+                </li>
+                <li>
+                    <a asp-action="FeverCheck" asp-controller="Doctor">Doctor</a>
+                </li>
+                <li>
+                    <a asp-action="Projects" asp-controller="Home">Projects</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <footer>
+
+        @{
+            DateTime currentDT = DateTime.Today;
+        }
+
+        <span> @currentDT &copy; Group44MCM</span>
+    </footer>
+</body>
+</html>
