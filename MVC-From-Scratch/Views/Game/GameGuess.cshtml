@@ -1,0 +1,29 @@
+﻿@using MVC_From_Scratch.Models
+
+@{
+    ViewData["Title"] = "GameGuess";
+}
+
+<h1>GameGuess</h1>
+<p>Guess a number between 1 - 100.</p>
+<div class="container">
+    <form asp-action="GameGuess" asp-controller="Game" method="post">
+        <input class="nrInput" type="number" name="guess" placeholder="Enter Number" value="" min="1" max="101" step="1" />
+        <button class="nrButton" type="submit">----</button>
+        <p>
+            @if (ViewBag.Msg != null)
+            {
+                @ViewBag.Msg
+            }
+        </p>
+        <p>
+            @if (ViewBag.Rnd != null)
+            {
+                @ViewBag.Rnd
+            }
+        </p>
+    </form>
+    <form asp-action="BortBort" asp-controller="Game" method="get">
+       <button type="submit">Reset</button>
+    </form>
+</div>

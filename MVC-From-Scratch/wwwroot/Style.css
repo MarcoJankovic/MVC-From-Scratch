@@ -46,3 +46,35 @@ nav {
             nav > ul > li:hover {
                 animation: tilt-shaking 0.35s infinite;
             }
+
+
+.mainBody {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    height: 800px;
+    width: 400px;
+}
+
+.nrInput {
+    width: 200px;
+    height: 50px;
+}
+
+.nrButton {
+    width: 60px;
+    height: 50px;
+    background: blue;
+    color: white;
+}
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
